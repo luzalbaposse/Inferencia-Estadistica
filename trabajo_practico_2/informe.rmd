@@ -10,7 +10,6 @@ output: pdf_document
 Sea \(X \sim U(0, 18)\) una variable distribuida uniformemente entre 0 y 18.
 
 ## 1.a Generar la función X_dist(R)
-
 ```{r}
 set.seed(6803)
 
@@ -136,9 +135,9 @@ hist(Y_dist(100), breaks = 30, main = "Histograma de Y (R = 100)", xlab = "Y", c
 hist(Y_dist(10^4), breaks = 30, main = "Histograma de Y (R = 10^4)", xlab = "Y", col = "blue")
 ```
 
-# Ejercicio 3: Teorema Central del Límite
+Esperamos ver una normal, tiene mucho menos dispersión que otro tipo de distribuciones dado a que es simétrica. Los histogramas se parecen porque hay menos varianza. 
 
-Este ejercicio explora cómo la media de una muestra grande se distribuye de manera aproximadamente normal, independientemente de la distribución original.
+# Ejercicio 3: Teorema Central del Límite
 
 ## 3.a Mostrar que se cumple el TCL para un caso particular
 
@@ -189,4 +188,6 @@ for (n in n_values) {
   }
 }
 ```
+
+Sabemos que si modificamos la variable R, la distribución no cambiará. Simplemente mostrará más o menos sampleos de la misma distribución, más o menos definida -dependiendo de la cantidad de datos-. En cambio, al variar n, el valor promedio de las muestras se acerca cada vez más a la esperanza teórica de la variable aleatoria subyacente (por el Teorema Central del Límite (TCL) y de la Ley de los Grandes Números). 
 
