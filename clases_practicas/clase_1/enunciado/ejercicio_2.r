@@ -26,11 +26,12 @@ levels(mur$region)
 
 # Tiene 4 niveles que son Northeast, South, North Central y West
 
-mur$region <- reorder(mur$region, mur$total)
+regiones <- reorder(mur$region, mur$total)
+regiones
 
 # d) Hallar la tasa de asesinatos (murder rate) por estado (nro de asesinatos/total de habitantes * 100000) y averig ̈ue cu ́al es el estado con menor tasa.
 
-murder_rate <- (mur$total/mur$population * 100000)
+murder_rate <- (mur$total/(mur$population * 100000))
 murder_rate
 
 rate_mas_bajo <- mur$state[which.min(murder_rate)]

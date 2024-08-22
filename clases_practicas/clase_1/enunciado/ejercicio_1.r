@@ -6,7 +6,7 @@ nac <- arbuthnot
 
 dim(nac)
 
-## Tiene 82 variables y 3 observaciones
+## Tiene 82 observaciones y 3 variables
 
 # b) Cuales son los nombres de las variables?
 

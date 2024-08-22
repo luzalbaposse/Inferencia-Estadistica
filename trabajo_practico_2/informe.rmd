@@ -1,0 +1,192 @@
+---
+title: "Distribución Uniforme y Teorema Central del Límite"
+author: "Luz Alba Posse & Martina Monastra"
+date: "`r Sys.Date()`"
+output: pdf_document
+---
+
+# Ejercicio 1: Distribución Uniforme
+
+Sea \(X \sim U(0, 18)\) una variable distribuida uniformemente entre 0 y 18.
+
+## 1.a Generar la función X_dist(R)
+
+```{r}
+set.seed(6803)
+
+# 1.a Generar la función X_dist(R)
+X_dist <- function(R) {
+  runif(R, min = 0, max = 18)
+}
+```
+
+## 1.b Calcular la media y la varianza muestral de los datos para \(R \in \{2, 30, 100, 10^4\}\).
+
+```{r}
+R_values <- c(2, 30, 100, 10^4)
+resultados <- data.frame(R = integer(), Media = numeric(), Varianza = numeric())
+
+for (R in R_values) {
+  muestras <- X_dist(R)
+  media_muestral <- mean(muestras)
+  varianza_muestral <- var(muestras)
+  resultados <- rbind(resultados, data.frame(R = R, Media = media_muestral, Varianza = varianza_muestral))
+}
+
+print(resultados)
+```
+
+## 1.c Calcular el valor teórico de la esperanza de \(X\), \(E(X)\), y su varianza, \(V(X)\). Comparar estos valores con los obtenidos en 1.b.
+
+Teóricamente, para una distribución uniforme \(U(a, b)\), la esperanza \(E(X)\) y la varianza \(V(X)\) se calculan como:
+
+\[
+E(X) = \frac{a + b}{2}, \quad V(X) = \frac{(b - a)^2}{12}
+\]
+
+En nuestro caso:
+
+```{r}
+a <- 0
+b <- 18
+E_X <- (a + b) / 2
+V_X <- (b - a)^2 / 12
+
+print(paste("Esperanza E(X):", E_X))
+print(paste("Varianza V(X):", V_X))
+```
+
+Al comparar con los valores muestrales obtenidos en 1.b, vemos que:
+
+- La media muestral se acerca bastante al valor teórico de \(E(X)\).
+- La varianza muestral también se aproxima al valor teórico, especialmente cuando \(R\) es grande.
+
+## 1.d Hacer dos histogramas de \(X\), tomando \(R \in \{100, 10^4\}\) realizaciones y 30 bines.
+
+```{r}
+par(mfrow = c(1, 2))  # Configurar la ventana gráfica para dos gráficos lado a lado
+
+# Histograma para R = 100
+hist(X_dist(100), breaks = 30, main = "Histograma para X (R = 100)", xlab = "Valores de X", col = "blue")
+
+# Histograma para R = 10^4
+hist(X_dist(10^4), breaks = 30, main = "Histograma para X (R = 10^4)", xlab = "Valores de X", col = "green")
+```
+
+La distribución esperada es una distribución uniforme. Al aumentar el número de realizaciones \(R\), el histograma se hace más suave y más cercano a la densidad teórica de la distribución uniforme.
+
+# Ejercicio 2: Otra Variable Aleatoria
+
+Dado que \(Y = \bar{X}_{15} = \frac{1}{15} \sum_{i=1}^{15} X_i\), donde cada \(X_i\) es independiente e idénticamente distribuido \(X_i \sim U(0, 18)\).
+
+## 2.a Generar una función Y_dist(R) que devuelva un vector con \(R\) realizaciones de \(Y\).
+
+```{r}
+
+
+
+
+Y_dist <- function(R) {
+  realizaciones <- replicate(R, mean(runif(15, min = 0, max = 18)))
+  return(realizaciones)
+}
+```
+
+## 2.b Calcular la media y la varianza muestral de los datos para \(R \in \{2, 30, 100, 10^4\}\).
+
+```{r}
+resultados_Y <- data.frame(R = integer(), Media = numeric(), Varianza = numeric())
+
+for (R in R_values) {
+  muestras_Y <- Y_dist(R)
+  media_muestral_Y <- mean(muestras_Y)
+  varianza_muestral_Y <- var(muestras_Y)
+  resultados_Y <- rbind(resultados_Y, data.frame(R = R, Media = media_muestral_Y, Varianza = varianza_muestral_Y))
+}
+
+print(resultados_Y)
+```
+
+## 2.c Comparar las medias empíricas y calcular teóricamente \(E(Y)\) y \(V(Y)\).
+
+Teóricamente, \(E(Y) = E(X)\) y \(V(Y) = \frac{V(X)}{15}\).
+
+```{r}
+E_Y <- E_X  # E(Y) = E(X)
+V_Y <- V_X / 15  # V(Y) = V(X) / 15
+
+print(paste("Esperanza E(Y):", E_Y))
+print(paste("Varianza V(Y):", V_Y))
+```
+
+Al comparar, notamos que:
+
+- Las medias empíricas se aproximan bastante al valor esperado teórico \(E(Y)\).
+- La varianza muestral también se aproxima al valor teórico a medida que \(R\) aumenta.
+
+## 2.d Hacer dos histogramas de \(Y\), tomando \(R \in \{100, 10^4\}\) realizaciones y 30 bines.
+
+```{r}
+par(mfrow = c(1, 2))  # Configurar la ventana gráfica para dos gráficos lado a lado
+
+# Histograma para R = 100
+hist(Y_dist(100), breaks = 30, main = "Histograma de Y (R = 100)", xlab = "Y", col = "magenta")
+
+# Histograma para R = 10^4
+hist(Y_dist(10^4), breaks = 30, main = "Histograma de Y (R = 10^4)", xlab = "Y", col = "blue")
+```
+
+# Ejercicio 3: Teorema Central del Límite
+
+Este ejercicio explora cómo la media de una muestra grande se distribuye de manera aproximadamente normal, independientemente de la distribución original.
+
+## 3.a Mostrar que se cumple el TCL para un caso particular
+
+Generamos un histograma para \(X\) y otro para \(X_{40}\), ambos con \(R = 10^6\) realizaciones.
+
+```{r}
+R <- 10^6
+n <- 40
+
+X <- runif(R, min = 0, max = 18)
+X_40 <- replicate(R, mean(runif(n, min = 0, max = 18)))
+
+par(mfrow = c(1, 2))
+
+# Histograma para X
+hist(X, breaks = 50, probability = TRUE, main = "Histograma de X", xlab = "X", col = "lightblue")
+curve(dunif(x, min = 0, max = 18), col = "red", lwd = 2, add = TRUE)
+
+# Histograma para X_40
+hist(X_40, breaks = 50, probability = TRUE, main = "Histograma de X_40", xlab = "X_40", col = "lightgreen")
+mu <- 9  # Esperanza de X
+sigma <- sqrt((18 - 0)^2 / 12) / sqrt(n)  
+curve(dnorm(x, mean = mu, sd = sigma), col = "red", lwd = 2, add = TRUE)
+```
+
+## 3.b Graficar ocho histogramas en un arreglo de 4x2 paneles
+
+Se varía el número de realizaciones \(n \in \{1, 2, 5, 15\}\) y el número de simulaciones \(R \in \{10^2, 10^6\}\).
+
+```{r}
+n_values <- c(1, 2, 5, 15)
+R_values <- c(10^2, 10^6)
+
+par(mfrow = c(4, 2))
+
+for (n in n_values) {
+  for (R in R_values) {
+    X_n <- replicate(R, mean(runif(n, min = 0, max = 18)))
+    hist(X_n, breaks = 50, probability = TRUE,
+         main = paste("n =", n, ", R =", R),
+         xlab = "X_n", col = "lightgray")
+    
+    if (n > 1) {
+      mu <- 9  # Esperanza de X
+      sigma <- sqrt((18 - 0)^2 / 12) / sqrt(n)  
+      curve(dnorm(x, mean = mu, sd = sigma), col = "red", lwd = 2, add = TRUE)
+    }
+  }
+}
+```
+
