@@ -2,8 +2,12 @@
 title: "Distribución Uniforme y Teorema Central del Límite"
 author: "Luz Alba Posse & Martina Monastra"
 date: "`r Sys.Date()`"
-output: pdf_document
+output:
+  pdf_document:
+    latex_engine: xelatex
+    geometry: "margin=2in"  
 ---
+
 
 # Ejercicio 1: Distribución Uniforme
 
@@ -64,6 +68,7 @@ Al comparar con los valores muestrales obtenidos en 1.b, vemos que:
 
 ```{r}
 par(mfrow = c(1, 2))  # Configurar la ventana gráfica para dos gráficos lado a lado
+par(mar = c(4, 4, 2, 1))  # Ajustar los márgenes del gráfico
 
 # Histograma para R = 100
 hist(X_dist(100), breaks = 30, main = "Histograma para X (R = 100)", xlab = "Valores de X", col = "blue")
@@ -81,10 +86,6 @@ Dado que \(Y = \bar{X}_{15} = \frac{1}{15} \sum_{i=1}^{15} X_i\), donde cada \(X
 ## 2.a Generar una función Y_dist(R) que devuelva un vector con \(R\) realizaciones de \(Y\).
 
 ```{r}
-
-
-
-
 Y_dist <- function(R) {
   realizaciones <- replicate(R, mean(runif(15, min = 0, max = 18)))
   return(realizaciones)
@@ -127,6 +128,7 @@ Al comparar, notamos que:
 
 ```{r}
 par(mfrow = c(1, 2))  # Configurar la ventana gráfica para dos gráficos lado a lado
+par(mar = c(4, 4, 2, 1))  # Ajustar los márgenes del gráfico
 
 # Histograma para R = 100
 hist(Y_dist(100), breaks = 30, main = "Histograma de Y (R = 100)", xlab = "Y", col = "magenta")
@@ -151,6 +153,7 @@ X <- runif(R, min = 0, max = 18)
 X_40 <- replicate(R, mean(runif(n, min = 0, max = 18)))
 
 par(mfrow = c(1, 2))
+par(mar = c(4, 4, 2, 1))  # Ajustar los márgenes del gráfico
 
 # Histograma para X
 hist(X, breaks = 50, probability = TRUE, main = "Histograma de X", xlab = "X", col = "lightblue")
@@ -171,11 +174,14 @@ Se varía el número de realizaciones \(n \in \{1, 2, 5, 15\}\) y el número de 
 n_values <- c(1, 2, 5, 15)
 R_values <- c(10^2, 10^6)
 
-par(mfrow = c(4, 2))
+par(mfrow = c(2, 2))  # Reducir a 4 gráficos por página para dar más espacio a cada uno
+par(mar = c(4, 4, 2, 1))  # Ajustar los márgenes del gráfico
 
 for (n in n_values) {
   for (R in R_values) {
-    X_n <- replicate(R, mean(runif(n, min = 0, max = 18)))
+    X_n <- replicate(R
+
+, mean(runif(n, min = 0, max = 18)))
     hist(X_n, breaks = 50, probability = TRUE,
          main = paste("n =", n, ", R =", R),
          xlab = "X_n", col = "lightgray")
@@ -189,5 +195,4 @@ for (n in n_values) {
 }
 ```
 
-Sabemos que si modificamos la variable R, la distribución no cambiará. Simplemente mostrará más o menos sampleos de la misma distribución, más o menos definida -dependiendo de la cantidad de datos-. En cambio, al variar n, el valor promedio de las muestras se acerca cada vez más a la esperanza teórica de la variable aleatoria subyacente (por el Teorema Central del Límite (TCL) y de la Ley de los Grandes Números). 
-
+Sabemos que si modificamos la variable R, la distribución no cambiará. Simplemente mostrará más o menos sampleos de la misma distribución, más o menos definida, dependiendo de la cantidad de datos. En cambio, al variar \( n \), el valor promedio de las muestras se acerca cada vez más a la esperanza teórica de la variable aleatoria subyacente, como se espera según el Teorema Central del Límite (TCL) y la Ley de los Grandes Números. 
