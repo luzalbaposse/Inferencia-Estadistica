@@ -5,7 +5,8 @@ date: "`r Sys.Date()`"
 output:
   pdf_document:
     latex_engine: xelatex
-    geometry: "margin=2in"  
+    extra_dependencies: ["geometry"]
+geometry: margin=2in
 ---
 
 
