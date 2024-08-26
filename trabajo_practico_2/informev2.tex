@@ -36,47 +36,45 @@
   \KOMAoptions{parskip=half}}
 \makeatother
 \usepackage{xcolor}
-\usepackage[margin=2in]{geometry}
+\usepackage[margin=1in]{geometry}
 \usepackage{color}
 \usepackage{fancyvrb}
 \newcommand{\VerbBar}{|}
 \newcommand{\VERB}{\Verb[commandchars=\\\{\}]}
 \DefineVerbatimEnvironment{Highlighting}{Verbatim}{commandchars=\\\{\}}
 % Add ',fontsize=\small' for more characters per line
-\usepackage{framed}
-\definecolor{shadecolor}{RGB}{248,248,248}
-\newenvironment{Shaded}{\begin{snugshade}}{\end{snugshade}}
-\newcommand{\AlertTok}[1]{\textcolor[rgb]{0.94,0.16,0.16}{#1}}
-\newcommand{\AnnotationTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textbf{\textit{#1}}}}
-\newcommand{\AttributeTok}[1]{\textcolor[rgb]{0.13,0.29,0.53}{#1}}
-\newcommand{\BaseNTok}[1]{\textcolor[rgb]{0.00,0.00,0.81}{#1}}
-\newcommand{\BuiltInTok}[1]{#1}
-\newcommand{\CharTok}[1]{\textcolor[rgb]{0.31,0.60,0.02}{#1}}
-\newcommand{\CommentTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textit{#1}}}
-\newcommand{\CommentVarTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textbf{\textit{#1}}}}
-\newcommand{\ConstantTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{#1}}
-\newcommand{\ControlFlowTok}[1]{\textcolor[rgb]{0.13,0.29,0.53}{\textbf{#1}}}
-\newcommand{\DataTypeTok}[1]{\textcolor[rgb]{0.13,0.29,0.53}{#1}}
-\newcommand{\DecValTok}[1]{\textcolor[rgb]{0.00,0.00,0.81}{#1}}
-\newcommand{\DocumentationTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textbf{\textit{#1}}}}
-\newcommand{\ErrorTok}[1]{\textcolor[rgb]{0.64,0.00,0.00}{\textbf{#1}}}
+\newenvironment{Shaded}{}{}
+\newcommand{\AlertTok}[1]{\textcolor[rgb]{1.00,0.00,0.00}{\textbf{#1}}}
+\newcommand{\AnnotationTok}[1]{\textcolor[rgb]{0.38,0.63,0.69}{\textbf{\textit{#1}}}}
+\newcommand{\AttributeTok}[1]{\textcolor[rgb]{0.49,0.56,0.16}{#1}}
+\newcommand{\BaseNTok}[1]{\textcolor[rgb]{0.25,0.63,0.44}{#1}}
+\newcommand{\BuiltInTok}[1]{\textcolor[rgb]{0.00,0.50,0.00}{#1}}
+\newcommand{\CharTok}[1]{\textcolor[rgb]{0.25,0.44,0.63}{#1}}
+\newcommand{\CommentTok}[1]{\textcolor[rgb]{0.38,0.63,0.69}{\textit{#1}}}
+\newcommand{\CommentVarTok}[1]{\textcolor[rgb]{0.38,0.63,0.69}{\textbf{\textit{#1}}}}
+\newcommand{\ConstantTok}[1]{\textcolor[rgb]{0.53,0.00,0.00}{#1}}
+\newcommand{\ControlFlowTok}[1]{\textcolor[rgb]{0.00,0.44,0.13}{\textbf{#1}}}
+\newcommand{\DataTypeTok}[1]{\textcolor[rgb]{0.56,0.13,0.00}{#1}}
+\newcommand{\DecValTok}[1]{\textcolor[rgb]{0.25,0.63,0.44}{#1}}
+\newcommand{\DocumentationTok}[1]{\textcolor[rgb]{0.73,0.13,0.13}{\textit{#1}}}
+\newcommand{\ErrorTok}[1]{\textcolor[rgb]{1.00,0.00,0.00}{\textbf{#1}}}
 \newcommand{\ExtensionTok}[1]{#1}
-\newcommand{\FloatTok}[1]{\textcolor[rgb]{0.00,0.00,0.81}{#1}}
-\newcommand{\FunctionTok}[1]{\textcolor[rgb]{0.13,0.29,0.53}{\textbf{#1}}}
-\newcommand{\ImportTok}[1]{#1}
-\newcommand{\InformationTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textbf{\textit{#1}}}}
-\newcommand{\KeywordTok}[1]{\textcolor[rgb]{0.13,0.29,0.53}{\textbf{#1}}}
+\newcommand{\FloatTok}[1]{\textcolor[rgb]{0.25,0.63,0.44}{#1}}
+\newcommand{\FunctionTok}[1]{\textcolor[rgb]{0.02,0.16,0.49}{#1}}
+\newcommand{\ImportTok}[1]{\textcolor[rgb]{0.00,0.50,0.00}{\textbf{#1}}}
+\newcommand{\InformationTok}[1]{\textcolor[rgb]{0.38,0.63,0.69}{\textbf{\textit{#1}}}}
+\newcommand{\KeywordTok}[1]{\textcolor[rgb]{0.00,0.44,0.13}{\textbf{#1}}}
 \newcommand{\NormalTok}[1]{#1}
-\newcommand{\OperatorTok}[1]{\textcolor[rgb]{0.81,0.36,0.00}{\textbf{#1}}}
-\newcommand{\OtherTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{#1}}
-\newcommand{\PreprocessorTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textit{#1}}}
+\newcommand{\OperatorTok}[1]{\textcolor[rgb]{0.40,0.40,0.40}{#1}}
+\newcommand{\OtherTok}[1]{\textcolor[rgb]{0.00,0.44,0.13}{#1}}
+\newcommand{\PreprocessorTok}[1]{\textcolor[rgb]{0.74,0.48,0.00}{#1}}
 \newcommand{\RegionMarkerTok}[1]{#1}
-\newcommand{\SpecialCharTok}[1]{\textcolor[rgb]{0.81,0.36,0.00}{\textbf{#1}}}
-\newcommand{\SpecialStringTok}[1]{\textcolor[rgb]{0.31,0.60,0.02}{#1}}
-\newcommand{\StringTok}[1]{\textcolor[rgb]{0.31,0.60,0.02}{#1}}
-\newcommand{\VariableTok}[1]{\textcolor[rgb]{0.00,0.00,0.00}{#1}}
-\newcommand{\VerbatimStringTok}[1]{\textcolor[rgb]{0.31,0.60,0.02}{#1}}
-\newcommand{\WarningTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textbf{\textit{#1}}}}
+\newcommand{\SpecialCharTok}[1]{\textcolor[rgb]{0.25,0.44,0.63}{#1}}
+\newcommand{\SpecialStringTok}[1]{\textcolor[rgb]{0.73,0.40,0.53}{#1}}
+\newcommand{\StringTok}[1]{\textcolor[rgb]{0.25,0.44,0.63}{#1}}
+\newcommand{\VariableTok}[1]{\textcolor[rgb]{0.10,0.09,0.49}{#1}}
+\newcommand{\VerbatimStringTok}[1]{\textcolor[rgb]{0.25,0.44,0.63}{#1}}
+\newcommand{\WarningTok}[1]{\textcolor[rgb]{0.38,0.63,0.69}{\textbf{\textit{#1}}}}
 \usepackage{graphicx}
 \makeatletter
 \newsavebox\pandoc@box
@@ -96,6 +94,9 @@
 \providecommand{\tightlist}{%
   \setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
 \setcounter{secnumdepth}{-\maxdimen} % remove section numbering
+\usepackage{fancyvrb}
+\DefineVerbatimEnvironment{Highlighting}{Verbatim}{fontsize=\small}
+\fvset{fontsize=\small}
 \usepackage{geometry}
 \usepackage{bookmark}
 \IfFileExists{xurl.sty}{\usepackage{xurl}}{} % add URL line breaks if available
@@ -144,9 +145,9 @@ de los datos para
 
 \ControlFlowTok{for}\NormalTok{ (R }\ControlFlowTok{in}\NormalTok{ R\_values) \{}
 \NormalTok{  muestras }\OtherTok{\textless{}{-}} \FunctionTok{X\_dist}\NormalTok{(R)}
-\NormalTok{  media\_muestral }\OtherTok{\textless{}{-}} \FunctionTok{mean}\NormalTok{(muestras)}
-\NormalTok{  varianza\_muestral }\OtherTok{\textless{}{-}} \FunctionTok{var}\NormalTok{(muestras)}
-\NormalTok{  resultados }\OtherTok{\textless{}{-}} \FunctionTok{rbind}\NormalTok{(resultados, }\FunctionTok{data.frame}\NormalTok{(}\AttributeTok{R =}\NormalTok{ R, }\AttributeTok{Media =}\NormalTok{ media\_muestral, }\AttributeTok{Varianza =}\NormalTok{ varianza\_muestral))}
+\NormalTok{  med\_m }\OtherTok{\textless{}{-}} \FunctionTok{mean}\NormalTok{(muestras)}
+\NormalTok{  var\_mue }\OtherTok{\textless{}{-}} \FunctionTok{var}\NormalTok{(muestras)}
+\NormalTok{  resultados }\OtherTok{\textless{}{-}} \FunctionTok{rbind}\NormalTok{(resultados, }\FunctionTok{data.frame}\NormalTok{(}\AttributeTok{R =}\NormalTok{ R, }\AttributeTok{Media =}\NormalTok{ med\_m, }\AttributeTok{Varianza =}\NormalTok{ var\_mue))}
 \NormalTok{\}}
 
 \FunctionTok{print}\NormalTok{(resultados)}
@@ -217,8 +218,8 @@ bines.}{1.d Hacer dos histogramas de X, tomando R \textbackslash in \textbacksla
 
 \begin{Shaded}
 \begin{Highlighting}[]
-\FunctionTok{par}\NormalTok{(}\AttributeTok{mfrow =} \FunctionTok{c}\NormalTok{(}\DecValTok{1}\NormalTok{, }\DecValTok{2}\NormalTok{))  }\CommentTok{\# Configurar la ventana gráfica para dos gráficos lado a lado}
-\FunctionTok{par}\NormalTok{(}\AttributeTok{mar =} \FunctionTok{c}\NormalTok{(}\DecValTok{4}\NormalTok{, }\DecValTok{4}\NormalTok{, }\DecValTok{2}\NormalTok{, }\DecValTok{1}\NormalTok{))  }\CommentTok{\# Ajustar los márgenes del gráfico}
+\FunctionTok{par}\NormalTok{(}\AttributeTok{mfrow =} \FunctionTok{c}\NormalTok{(}\DecValTok{1}\NormalTok{, }\DecValTok{2}\NormalTok{))  }
+\FunctionTok{par}\NormalTok{(}\AttributeTok{mar =} \FunctionTok{c}\NormalTok{(}\DecValTok{4}\NormalTok{, }\DecValTok{4}\NormalTok{, }\DecValTok{2}\NormalTok{, }\DecValTok{1}\NormalTok{))  }
 
 \CommentTok{\# Histograma para R = 100}
 \FunctionTok{hist}\NormalTok{(}\FunctionTok{X\_dist}\NormalTok{(}\DecValTok{100}\NormalTok{), }\AttributeTok{breaks =} \DecValTok{30}\NormalTok{, }\AttributeTok{main =} \StringTok{"Histograma para X (R = 100)"}\NormalTok{, }\AttributeTok{xlab =} \StringTok{"Valores de X"}\NormalTok{, }\AttributeTok{col =} \StringTok{"blue"}\NormalTok{)}
@@ -228,7 +229,7 @@ bines.}{1.d Hacer dos histogramas de X, tomando R \textbackslash in \textbacksla
 \end{Highlighting}
 \end{Shaded}
 
-\pandocbounded{\includegraphics[keepaspectratio]{informe_files/figure-latex/unnamed-chunk-4-1.pdf}}
+\pandocbounded{\includegraphics[keepaspectratio]{informev2_files/figure-latex/unnamed-chunk-4-1.pdf}}
 
 La distribución esperada es una distribución uniforme. Al aumentar el
 número de realizaciones \(R\), el histograma se hace más suave y más
@@ -264,9 +265,9 @@ de los datos para
 
 \ControlFlowTok{for}\NormalTok{ (R }\ControlFlowTok{in}\NormalTok{ R\_values) \{}
 \NormalTok{  muestras\_Y }\OtherTok{\textless{}{-}} \FunctionTok{Y\_dist}\NormalTok{(R)}
-\NormalTok{  media\_muestral\_Y }\OtherTok{\textless{}{-}} \FunctionTok{mean}\NormalTok{(muestras\_Y)}
-\NormalTok{  varianza\_muestral\_Y }\OtherTok{\textless{}{-}} \FunctionTok{var}\NormalTok{(muestras\_Y)}
-\NormalTok{  resultados\_Y }\OtherTok{\textless{}{-}} \FunctionTok{rbind}\NormalTok{(resultados\_Y, }\FunctionTok{data.frame}\NormalTok{(}\AttributeTok{R =}\NormalTok{ R, }\AttributeTok{Media =}\NormalTok{ media\_muestral\_Y, }\AttributeTok{Varianza =}\NormalTok{ varianza\_muestral\_Y))}
+\NormalTok{  med\_m\_Y }\OtherTok{\textless{}{-}} \FunctionTok{mean}\NormalTok{(muestras\_Y)}
+\NormalTok{  var\_mue\_Y }\OtherTok{\textless{}{-}} \FunctionTok{var}\NormalTok{(muestras\_Y)}
+\NormalTok{  resultados\_Y }\OtherTok{\textless{}{-}} \FunctionTok{rbind}\NormalTok{(resultados\_Y, }\FunctionTok{data.frame}\NormalTok{(}\AttributeTok{R =}\NormalTok{ R, }\AttributeTok{Media =}\NormalTok{ med\_m\_Y, }\AttributeTok{Varianza =}\NormalTok{ var\_mue\_Y))}
 \NormalTok{\}}
 
 \FunctionTok{print}\NormalTok{(resultados\_Y)}
@@ -289,8 +290,8 @@ Teóricamente, \(E(Y) = E(X)\) y \(V(Y) = \frac{V(X)}{15}\).
 
 \begin{Shaded}
 \begin{Highlighting}[]
-\NormalTok{E\_Y }\OtherTok{\textless{}{-}}\NormalTok{ E\_X  }\CommentTok{\# E(Y) = E(X)}
-\NormalTok{V\_Y }\OtherTok{\textless{}{-}}\NormalTok{ V\_X }\SpecialCharTok{/} \DecValTok{15}  \CommentTok{\# V(Y) = V(X) / 15}
+\NormalTok{E\_Y }\OtherTok{\textless{}{-}}\NormalTok{ E\_X  }
+\NormalTok{V\_Y }\OtherTok{\textless{}{-}}\NormalTok{ V\_X }\SpecialCharTok{/} \DecValTok{15}  
 
 \FunctionTok{print}\NormalTok{(}\FunctionTok{paste}\NormalTok{(}\StringTok{"Esperanza E(Y):"}\NormalTok{, E\_Y))}
 \end{Highlighting}
@@ -328,8 +329,8 @@ bines.}{2.d Hacer dos histogramas de Y, tomando R \textbackslash in \textbacksla
 
 \begin{Shaded}
 \begin{Highlighting}[]
-\FunctionTok{par}\NormalTok{(}\AttributeTok{mfrow =} \FunctionTok{c}\NormalTok{(}\DecValTok{1}\NormalTok{, }\DecValTok{2}\NormalTok{))  }\CommentTok{\# Configurar la ventana gráfica para dos gráficos lado a lado}
-\FunctionTok{par}\NormalTok{(}\AttributeTok{mar =} \FunctionTok{c}\NormalTok{(}\DecValTok{4}\NormalTok{, }\DecValTok{4}\NormalTok{, }\DecValTok{2}\NormalTok{, }\DecValTok{1}\NormalTok{))  }\CommentTok{\# Ajustar los márgenes del gráfico}
+\FunctionTok{par}\NormalTok{(}\AttributeTok{mfrow =} \FunctionTok{c}\NormalTok{(}\DecValTok{1}\NormalTok{, }\DecValTok{2}\NormalTok{))  }
+\FunctionTok{par}\NormalTok{(}\AttributeTok{mar =} \FunctionTok{c}\NormalTok{(}\DecValTok{4}\NormalTok{, }\DecValTok{4}\NormalTok{, }\DecValTok{2}\NormalTok{, }\DecValTok{1}\NormalTok{)) }
 
 \CommentTok{\# Histograma para R = 100}
 \FunctionTok{hist}\NormalTok{(}\FunctionTok{Y\_dist}\NormalTok{(}\DecValTok{100}\NormalTok{), }\AttributeTok{breaks =} \DecValTok{30}\NormalTok{, }\AttributeTok{main =} \StringTok{"Histograma de Y (R = 100)"}\NormalTok{, }\AttributeTok{xlab =} \StringTok{"Y"}\NormalTok{, }\AttributeTok{col =} \StringTok{"magenta"}\NormalTok{)}
@@ -339,7 +340,7 @@ bines.}{2.d Hacer dos histogramas de Y, tomando R \textbackslash in \textbacksla
 \end{Highlighting}
 \end{Shaded}
 
-\pandocbounded{\includegraphics[keepaspectratio]{informe_files/figure-latex/unnamed-chunk-8-1.pdf}}
+\pandocbounded{\includegraphics[keepaspectratio]{informev2_files/figure-latex/unnamed-chunk-8-1.pdf}}
 
 Esperamos ver una normal, tiene mucho menos dispersión que otro tipo de
 distribuciones dado a que es simétrica. Los histogramas se parecen
@@ -363,7 +364,7 @@ Generamos un histograma para \(X\) y otro para \(X_{40}\), ambos con
 \NormalTok{X\_40 }\OtherTok{\textless{}{-}} \FunctionTok{replicate}\NormalTok{(R, }\FunctionTok{mean}\NormalTok{(}\FunctionTok{runif}\NormalTok{(n, }\AttributeTok{min =} \DecValTok{0}\NormalTok{, }\AttributeTok{max =} \DecValTok{18}\NormalTok{)))}
 
 \FunctionTok{par}\NormalTok{(}\AttributeTok{mfrow =} \FunctionTok{c}\NormalTok{(}\DecValTok{1}\NormalTok{, }\DecValTok{2}\NormalTok{))}
-\FunctionTok{par}\NormalTok{(}\AttributeTok{mar =} \FunctionTok{c}\NormalTok{(}\DecValTok{4}\NormalTok{, }\DecValTok{4}\NormalTok{, }\DecValTok{2}\NormalTok{, }\DecValTok{1}\NormalTok{))  }\CommentTok{\# Ajustar los márgenes del gráfico}
+\FunctionTok{par}\NormalTok{(}\AttributeTok{mar =} \FunctionTok{c}\NormalTok{(}\DecValTok{4}\NormalTok{, }\DecValTok{4}\NormalTok{, }\DecValTok{2}\NormalTok{, }\DecValTok{1}\NormalTok{))  }
 
 \CommentTok{\# Histograma para X}
 \FunctionTok{hist}\NormalTok{(X, }\AttributeTok{breaks =} \DecValTok{50}\NormalTok{, }\AttributeTok{probability =} \ConstantTok{TRUE}\NormalTok{, }\AttributeTok{main =} \StringTok{"Histograma de X"}\NormalTok{, }\AttributeTok{xlab =} \StringTok{"X"}\NormalTok{, }\AttributeTok{col =} \StringTok{"lightblue"}\NormalTok{)}
@@ -371,39 +372,39 @@ Generamos un histograma para \(X\) y otro para \(X_{40}\), ambos con
 
 \CommentTok{\# Histograma para X\_40}
 \FunctionTok{hist}\NormalTok{(X\_40, }\AttributeTok{breaks =} \DecValTok{50}\NormalTok{, }\AttributeTok{probability =} \ConstantTok{TRUE}\NormalTok{, }\AttributeTok{main =} \StringTok{"Histograma de X\_40"}\NormalTok{, }\AttributeTok{xlab =} \StringTok{"X\_40"}\NormalTok{, }\AttributeTok{col =} \StringTok{"lightgreen"}\NormalTok{)}
-\NormalTok{mu }\OtherTok{\textless{}{-}} \DecValTok{9}  \CommentTok{\# Esperanza de X}
+\NormalTok{mu }\OtherTok{\textless{}{-}} \DecValTok{9}  
 \NormalTok{sigma }\OtherTok{\textless{}{-}} \FunctionTok{sqrt}\NormalTok{((}\DecValTok{18} \SpecialCharTok{{-}} \DecValTok{0}\NormalTok{)}\SpecialCharTok{\^{}}\DecValTok{2} \SpecialCharTok{/} \DecValTok{12}\NormalTok{) }\SpecialCharTok{/} \FunctionTok{sqrt}\NormalTok{(n)  }
 \FunctionTok{curve}\NormalTok{(}\FunctionTok{dnorm}\NormalTok{(x, }\AttributeTok{mean =}\NormalTok{ mu, }\AttributeTok{sd =}\NormalTok{ sigma), }\AttributeTok{col =} \StringTok{"red"}\NormalTok{, }\AttributeTok{lwd =} \DecValTok{2}\NormalTok{, }\AttributeTok{add =} \ConstantTok{TRUE}\NormalTok{)}
 \end{Highlighting}
 \end{Shaded}
 
-\pandocbounded{\includegraphics[keepaspectratio]{informe_files/figure-latex/unnamed-chunk-9-1.pdf}}
+\pandocbounded{\includegraphics[keepaspectratio]{informev2_files/figure-latex/unnamed-chunk-9-1.pdf}}
 
 \subsection{3.b Graficar ocho histogramas en un arreglo de 4x2
 paneles}\label{b-graficar-ocho-histogramas-en-un-arreglo-de-4x2-paneles}
 
-Se varía el número de realizaciones \(n \in \{1, 2, 5, 15\}\) y el
-número de simulaciones \(R \in \{10^2, 10^6\}\).
+Se varía el número de realizaciones \(n \in \{1, 2, 5, 15}\) y el número
+de simulaciones \(R \in \{10^2, 10^6}\).
 
 \begin{Shaded}
 \begin{Highlighting}[]
 \NormalTok{n\_values }\OtherTok{\textless{}{-}} \FunctionTok{c}\NormalTok{(}\DecValTok{1}\NormalTok{, }\DecValTok{2}\NormalTok{, }\DecValTok{5}\NormalTok{, }\DecValTok{15}\NormalTok{)}
 \NormalTok{R\_values }\OtherTok{\textless{}{-}} \FunctionTok{c}\NormalTok{(}\DecValTok{10}\SpecialCharTok{\^{}}\DecValTok{2}\NormalTok{, }\DecValTok{10}\SpecialCharTok{\^{}}\DecValTok{6}\NormalTok{)}
 
-\FunctionTok{par}\NormalTok{(}\AttributeTok{mfrow =} \FunctionTok{c}\NormalTok{(}\DecValTok{2}\NormalTok{, }\DecValTok{2}\NormalTok{))  }\CommentTok{\# Reducir a 4 gráficos por página para dar más espacio a cada uno}
-\FunctionTok{par}\NormalTok{(}\AttributeTok{mar =} \FunctionTok{c}\NormalTok{(}\DecValTok{4}\NormalTok{, }\DecValTok{4}\NormalTok{, }\DecValTok{2}\NormalTok{, }\DecValTok{1}\NormalTok{))  }\CommentTok{\# Ajustar los márgenes del gráfico}
+\FunctionTok{par}\NormalTok{(}\AttributeTok{mfrow =} \FunctionTok{c}\NormalTok{(}\DecValTok{2}\NormalTok{, }\DecValTok{2}\NormalTok{)) }
+\FunctionTok{par}\NormalTok{(}\AttributeTok{mar =} \FunctionTok{c}\NormalTok{(}\DecValTok{4}\NormalTok{, }\DecValTok{4}\NormalTok{, }\DecValTok{2}\NormalTok{, }\DecValTok{1}\NormalTok{)) }
 
 \ControlFlowTok{for}\NormalTok{ (n }\ControlFlowTok{in}\NormalTok{ n\_values) \{}
   \ControlFlowTok{for}\NormalTok{ (R }\ControlFlowTok{in}\NormalTok{ R\_values) \{}
-\NormalTok{    X\_n }\OtherTok{\textless{}{-}} \FunctionTok{replicate}\NormalTok{(R}
-
-\NormalTok{, }\FunctionTok{mean}\NormalTok{(}\FunctionTok{runif}\NormalTok{(n, }\AttributeTok{min =} \DecValTok{0}\NormalTok{, }\AttributeTok{max =} \DecValTok{18}\NormalTok{)))}
+\NormalTok{    X\_n }\OtherTok{\textless{}{-}} \FunctionTok{replicate}\NormalTok{(R, }\FunctionTok{mean}\NormalTok{(}\FunctionTok{runif}\NormalTok{(n, }\AttributeTok{min =} \DecValTok{0}\NormalTok{, }\AttributeTok{max =} \DecValTok{18}\NormalTok{)))}
     \FunctionTok{hist}\NormalTok{(X\_n, }\AttributeTok{breaks =} \DecValTok{50}\NormalTok{, }\AttributeTok{probability =} \ConstantTok{TRUE}\NormalTok{,}
          \AttributeTok{main =} \FunctionTok{paste}\NormalTok{(}\StringTok{"n ="}\NormalTok{, n, }\StringTok{", R ="}\NormalTok{, R),}
          \AttributeTok{xlab =} \StringTok{"X\_n"}\NormalTok{, }\AttributeTok{col =} \StringTok{"lightgray"}\NormalTok{)}
     
-    \ControlFlowTok{if}\NormalTok{ (n }\SpecialCharTok{\textgreater{}} \DecValTok{1}\NormalTok{) \{}
-\NormalTok{      mu }\OtherTok{\textless{}{-}} \DecValTok{9}  \CommentTok{\# Esperanza de X}
+    \ControlFlowTok{if}\NormalTok{ (n }\SpecialCharTok{\textgreater{}}
+
+ \DecValTok{1}\NormalTok{) \{}
+\NormalTok{      mu }\OtherTok{\textless{}{-}} \DecValTok{9}  
 \NormalTok{      sigma }\OtherTok{\textless{}{-}} \FunctionTok{sqrt}\NormalTok{((}\DecValTok{18} \SpecialCharTok{{-}} \DecValTok{0}\NormalTok{)}\SpecialCharTok{\^{}}\DecValTok{2} \SpecialCharTok{/} \DecValTok{12}\NormalTok{) }\SpecialCharTok{/} \FunctionTok{sqrt}\NormalTok{(n)  }
       \FunctionTok{curve}\NormalTok{(}\FunctionTok{dnorm}\NormalTok{(x, }\AttributeTok{mean =}\NormalTok{ mu, }\AttributeTok{sd =}\NormalTok{ sigma), }\AttributeTok{col =} \StringTok{"red"}\NormalTok{, }\AttributeTok{lwd =} \DecValTok{2}\NormalTok{, }\AttributeTok{add =} \ConstantTok{TRUE}\NormalTok{)}
 \NormalTok{    \}}
@@ -412,8 +413,8 @@ número de simulaciones \(R \in \{10^2, 10^6\}\).
 \end{Highlighting}
 \end{Shaded}
 
-\pandocbounded{\includegraphics[keepaspectratio]{informe_files/figure-latex/unnamed-chunk-10-1.pdf}}
-\pandocbounded{\includegraphics[keepaspectratio]{informe_files/figure-latex/unnamed-chunk-10-2.pdf}}
+\pandocbounded{\includegraphics[keepaspectratio]{informev2_files/figure-latex/unnamed-chunk-10-1.pdf}}
+\pandocbounded{\includegraphics[keepaspectratio]{informev2_files/figure-latex/unnamed-chunk-10-2.pdf}}
 
 Sabemos que si modificamos la variable R, la distribución no cambiará.
 Simplemente mostrará más o menos sampleos de la misma distribución, más
